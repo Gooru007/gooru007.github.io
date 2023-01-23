@@ -128,6 +128,7 @@ const tasks = [
       taskElem = e.target.closest(".task");
       taskId = taskElem.getAttribute("data-task-id");
       modal.style.display = "block";
+      document.body.classList.add("no-scroll");
       modalText.textContent = `Are you shure you wont to delete the task: ${objOfTasks[taskId].title}?`;
     }
   }
@@ -143,12 +144,14 @@ const tasks = [
   function onModalHandler(e) {
     if (e.target.classList.contains("btn--modal-return")) {
       modal.style.display = "none";
+      document.body.classList.remove("no-scroll");
       return;
     }
     if (e.target.classList.contains("btn--modal-delete")) {
       deleteTaskFromObj(taskId);
       deleteTaskFromLayout(taskElem);
       modal.style.display = "none";
+      document.body.classList.remove("no-scroll");
     }
   }
 
