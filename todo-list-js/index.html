@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <img src="images/monster.png" alt="it monster" class="header__img" />
+          <select class="header__select-theme" name="theme">
+            <option value="dark">Dark theme</option>
+            <option value="light">Light theme</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <h1>Todo List</h1>
+        <form action="#" class="add-task" name="addTask">
+          <h2>Add new task</h2>
+          <input type="text" placeholder="Task Title" name="taskTitle" />
+          <textarea name="taskText" placeholder="Task Text"></textarea>
+          <button class="btn">Add task</button>
+        </form>
+        <div class="task-wrapper"></div>
+      </div>
+    </main>
+    <div class="modal">
+      <p class="modal__text"></p>
+      <div class="modal__inner">
+        <button class="btn btn--modal-return">Return</button>
+        <button class="btn btn--delete btn--modal-delete">Yes, delete</button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
