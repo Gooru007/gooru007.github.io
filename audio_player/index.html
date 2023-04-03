@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <div class="player">
+      <div class="player-head">
+        <p class="current-time">00:00</p>
+        <p class="track-name">Track Name</p>
+        <p class="total-duration">00:00</p>
+      </div>
+      <input class="track-progress" type="range" min="0" max="100" value="0" />
+      <div class="player-footer">
+        <div class="player-buttons">
+          <span class="track-random icon-shuffle"></span>
+          <span class="track-prev icon-previous"></span>
+          <span class="track-play-pause icon-play"></span>
+          <span class="track-next icon-next"></span>
+          <span class="track-repeat icon-spinner"></span>
+        </div>
+        <div class="track-volume-wrapper">
+          <span class="icon-volume-low"></span>
+          <input
+            class="track-volume"
+            type="range"
+            min="0"
+            max="100"
+            value="100"
+          />
+          <span class="icon-volume-high"></span>
+        </div>
+      </div>
+    </div>
+    <ul class="track-list"></ul>
+    <script src="js/script.js"></script>
+  </body>
+</html>
